@@ -1,7 +1,7 @@
 
 # Blog Frontend
 
-Blog Built on Next js, Tailwind CSS, and Typescript. 
+Blog Built on Next js, Tailwind CSS, and Typescript. <br/>
 Live on [blog-arvind11](https://www.blog-arvind11.ml/) .
 
 ### Get the Code
