@@ -1,5 +1,4 @@
-
-# Blog Frontend
+# Blog
 
 Blog Built on Next js, Tailwind CSS, and Typescript. <br/>
 Live on [blog-arvind11](https://www.blog-arvind11.ml/) .
@@ -13,6 +12,7 @@ mkdir blog_frontend
 cd blog_frontend
 git clone https://github.com/Arvind-4/Blog-Frontend.git .
 ```
+
 - Install Dependencies
 
 ```
