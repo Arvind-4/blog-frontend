@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { PostType } from '@src/config'
 
@@ -7,7 +8,7 @@ const SinglePost = ({ post }: { post: PostType }) => {
     <>
       <article className='bg-white rounded shadow p-6 md:p-7 lg:p-9 min-h-screen'>
         {post.tags.map((tag, index) => (
-          <Link href={`/tags/` + tag.tag}>
+          <Link href={`/tags/` + tag.tag} key={index}>
             <a
               className='font-bold text-red-500 px-1 py-1 uppercase'
               key={index}
@@ -21,9 +22,12 @@ const SinglePost = ({ post }: { post: PostType }) => {
         </h1>
         <div className='mt-4 mb-3 text-sm text-gray-700 flex items-center'>
           {post.author_profile ? (
-            <img
+            <Image
               src={post.author_profile}
               className='rounded-full w-7 h-7 inline mr-2'
+              alt={String(post.author)}
+              width={28}
+              height={28}
             />
           ) : (
             ''
@@ -37,7 +41,12 @@ const SinglePost = ({ post }: { post: PostType }) => {
           </span>
         </div>
         <div className='prose prose-sm sm:prose lg:prose-lg mx-auto mt-4 md:mt-6'>
-          <img src={post.image_field} alt={post.image_alt} />
+          <Image
+            src={post.image_field}
+            alt={post.image_alt}
+            width={800}
+            height={400}
+          />
 
           <p>{post.content}</p>
 

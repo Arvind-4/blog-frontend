@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import CustomHeader from '@src/components/custom-header'
 
 export default function Sidebar() {
@@ -9,9 +10,12 @@ export default function Sidebar() {
         <div className='sticky h-screen top-0 py-20 flex flex-wrap content-center'>
           <div className='w-full content-center text-center'>
             <Link href='/'>
-              <img
+              <Image
                 className='text-center w-32 md:w-36'
                 src='/asserts/logo.png'
+                alt='logo'
+                width={144}
+                height={144}
               />
             </Link>
           </div>

@@ -1,12 +1,13 @@
 import Link from 'next/link'
 
 import { PostType } from '@src/config'
+import Image from 'next/image'
 
 const PostList = ({ posts }: { posts: Array<PostType> }) => {
   return (
     <>
       {posts.map((post: PostType, index: number) => (
-        <div className='bg-white rounded shadow'>
+        <div className='bg-white rounded shadow' key={index}>
           <div className='p-6 md:p-7 lg:p-9' key={index}>
             {post.tags.map((tag: any, index: number) => (
               <Link
@@ -22,13 +23,14 @@ const PostList = ({ posts }: { posts: Array<PostType> }) => {
             </h3>
             <div className='mt-3 mb-3 text-sm text-gray-700 flex items-center'>
               {post.author_profile ? (
-                <img
+                <Image
                   src={post.author_profile}
                   className='rounded-full w-7 h-7 inline mr-2'
+                  alt={post.author}
+                  width={28}
+                  height={28}
                 />
-              ) : (
-                ''
-              )}
+              ) : null}
               <a href='#' className='font-bold text-gray-600'>
                 {post.author}
               </a>
