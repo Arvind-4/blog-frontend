@@ -3,6 +3,15 @@
 Blog built on next.js, tailwind, typescript and contentlayer! <br/>
 Live [here!](https://blog-arvind11.vercel.app).
 
+<br />
+<br />
+
+> This is the latest version. <br />
+> The old version is [here](https://github.com/Arvind-4/blog-frontend/tree/old-blog)
+
+<br />
+<br />
+
 ### Get the Code
 
 - Clone Repo
