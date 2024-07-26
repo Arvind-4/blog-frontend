@@ -1,20 +1,33 @@
-# Blog
+# Blog in [Next.js](https://nextjs.org)
 
-Blog Built on Next js, Tailwind CSS, and Typescript. <br/>
-Live on [blog-arvind11](https://www.blog-arvind11.ml/) .
+Blog built on next.js, tailwind, typescript and contentlayer! <br/>
+Live [here!](https://blog-arvind11.vercel.app).
 
 ### Get the Code
 
 - Clone Repo
 
-```
-mkdir blog_frontend
-cd blog_frontend
-git clone https://github.com/Arvind-4/Blog-Frontend.git .
+```bash
+cd ~/Dev
+mkdir ~/Dev/blog -p
+cd ~/Dev/blog
+git clone hhttps://github.com/Arvind-4/blog-frontend.git .
 ```
 
 - Install Dependencies
 
+```bash
+pnpm install
 ```
-yarn install
+
+- Make a `.env`
+
+```bash
+cp .env.sample .env
+```
+
+- Run dev server
+
+```bash
+pnpm dev
 ```
