@@ -1,3 +1,3 @@
-export default function Home() {
-  return <main>Hello from Linux!</main>
+export default function HomePage() {
+  return <main>Hello from Linux!</main>;
 }

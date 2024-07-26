@@ -1,30 +1,30 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { PostType } from '@src/config'
+import { PostType } from '@src/config';
 
 const SinglePost = ({ post }: { post: PostType }) => {
   return (
     <>
-      <article className='bg-white rounded shadow p-6 md:p-7 lg:p-9 min-h-screen'>
+      <article className="bg-white rounded shadow p-6 md:p-7 lg:p-9 min-h-screen">
         {post.tags.map((tag, index) => (
           <Link href={`/tags/` + tag.tag} key={index}>
             <a
-              className='font-bold text-red-500 px-1 py-1 uppercase'
+              className="font-bold text-red-500 px-1 py-1 uppercase"
               key={index}
             >
               {tag.tag}
             </a>
           </Link>
         ))}
-        <h1 className='font-black text-xl sm:text-2xl md:text-3xl lg:text-5xl mt-2'>
+        <h1 className="font-black text-xl sm:text-2xl md:text-3xl lg:text-5xl mt-2">
           {post.title}
         </h1>
-        <div className='mt-4 mb-3 text-sm text-gray-700 flex items-center'>
+        <div className="mt-4 mb-3 text-sm text-gray-700 flex items-center">
           {post.author_profile ? (
             <Image
               src={post.author_profile}
-              className='rounded-full w-7 h-7 inline mr-2'
+              className="rounded-full w-7 h-7 inline mr-2"
               alt={String(post.author)}
               width={28}
               height={28}
@@ -32,15 +32,15 @@ const SinglePost = ({ post }: { post: PostType }) => {
           ) : (
             ''
           )}
-          <a href='#' className='font-bold text-gray-600'>
+          <a href="#" className="font-bold text-gray-600">
             {post.author}
           </a>
-          <span className='ml-3'>
-            <i className='far fa-clock px-2'></i>
+          <span className="ml-3">
+            <i className="far fa-clock px-2"></i>
             {post.reading_time}
           </span>
         </div>
-        <div className='prose prose-sm sm:prose lg:prose-lg mx-auto mt-4 md:mt-6'>
+        <div className="prose prose-sm sm:prose lg:prose-lg mx-auto mt-4 md:mt-6">
           <Image
             src={post.image_field}
             alt={post.image_alt}
@@ -76,7 +76,7 @@ const SinglePost = ({ post }: { post: PostType }) => {
         </div>
       </article>
     </>
-  )
-}
+  );
+};
 
-export default SinglePost
+export default SinglePost;

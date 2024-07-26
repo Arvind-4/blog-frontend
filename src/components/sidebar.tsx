@@ -1,30 +1,31 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import CustomHeader from '@src/components/custom-header'
+import Image from 'next/image';
+import Link from 'next/link';
+
+import CustomHeader from '@src/components/custom-header';
 
 export default function Sidebar() {
   return (
     <div>
       <CustomHeader />
-      <aside className='md:block h-full'>
-        <div className='sticky h-screen top-0 py-20 flex flex-wrap content-center'>
-          <div className='w-full content-center text-center'>
-            <Link href='/'>
+      <aside className="md:block h-full">
+        <div className="sticky h-screen top-0 py-20 flex flex-wrap content-center">
+          <div className="w-full content-center text-center">
+            <Link href="/">
               <Image
-                className='text-center w-32 md:w-36'
-                src='/asserts/logo.png'
-                alt='logo'
+                className="text-center w-32 md:w-36"
+                src="/asserts/logo.png"
+                alt="logo"
                 width={144}
                 height={144}
               />
             </Link>
           </div>
           <div>
-            <ul className='w-full mt-10'>
-              <li className='mb-5'>
+            <ul className="w-full mt-10">
+              <li className="mb-5">
                 <Link
-                  href='/'
-                  className='block rounded px-4 py-2.5 transition duration-200 hover:bg-gray-400'
+                  href="/"
+                  className="block rounded px-4 py-2.5 transition duration-200 hover:bg-gray-400"
                 >
                   Home
                 </Link>
@@ -51,14 +52,14 @@ export default function Sidebar() {
                 </li> */}
             </ul>
           </div>
-          <div className='w-full mt-10 text-center'>
+          <div className="w-full mt-10 text-center">
             <ul>
-              <li className='inline-block mr-2 p-1'>
+              <li className="inline-block mr-2 p-1">
                 <Link
-                  href='https://www.instagram.com/_arvind.a_/'
-                  target='_blank'
+                  href="https://www.instagram.com/_arvind.a_/"
+                  target="_blank"
                 >
-                  <i className='text-white fab fa-instagram fa-2x'></i>
+                  <i className="text-white fab fa-instagram fa-2x"></i>
                 </Link>
               </li>
               {/* <li className='inline-block mr-2 p-1'>
@@ -90,12 +91,12 @@ export default function Sidebar() {
                   </Link>
                 </li> */}
             </ul>
-            <p className='text-gray-300 mt-5'>
+            <p className="text-gray-300 mt-5">
               All Rights Reserved. Arvind 2021
             </p>
           </div>
         </div>
       </aside>
     </div>
-  )
+  );
 }

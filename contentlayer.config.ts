@@ -1,9 +1,9 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 
 interface Doc {
   _raw: {
-    flattenedPath: string
-  }
+    flattenedPath: string;
+  };
 }
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
@@ -16,7 +16,7 @@ const computedFields: Record<string, any> = {
     type: 'string',
     resolve: (doc: Doc) => doc._raw.flattenedPath.split('/').slice(1).join('/'),
   },
-}
+};
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -36,9 +36,9 @@ export const Post = defineDocumentType(() => ({
     },
   },
   computedFields,
-}))
+}));
 
 export default makeSource({
   contentDirPath: './content',
   documentTypes: [Post],
-})
+});
